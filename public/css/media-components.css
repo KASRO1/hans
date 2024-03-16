@@ -1,0 +1,70 @@
+
+@media (max-width: 768px) {
+
+    .btn-subscr > span {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+
+    .videos-block {
+        max-height: 1266px;
+        overflow-y: hidden;
+    }
+
+    .videos-block-item__label {
+        font-size: 9px;
+        letter-spacing: 0.45px;
+    }
+
+    .videos-block-item__title {
+        font-size: 13px;
+        letter-spacing: 0.65px;
+    }
+
+    .videos-block-item__category {
+        margin-top: 12px;
+
+        font-size: 11px;
+        letter-spacing: 0.55px;
+    }
+
+    .videos-block-item__time {
+        font-size: 8px;
+        letter-spacing: 0.4px;
+    }
+
+    .btn-videos-block-show-more {
+        display: block;
+    }
+
+    .price-hide-content {
+        padding: 0;
+    }
+
+    .price-hide-content .btn-subscr:nth-child(2) {
+        /*display: none;*/
+    }
+
+    .price-hide-content .btn-subscr {
+        max-width: none;
+    }
+
+
+    .footer-contact_for_contact,
+    .footer-contact__email {
+        letter-spacing: 2.6px;
+    }
+
+ }
+
+
+ @media (max-width: 576px) {
+
+    .videos-block-item {
+        min-height: 232px;
+    }
+
+    .footer-contact__email  {
+        margin-top: 12px;
+    }
+}

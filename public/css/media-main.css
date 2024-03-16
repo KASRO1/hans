@@ -1,0 +1,164 @@
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 1200px) {
+    .header-welcome__title {
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .header::before {
+        left: -130px;
+        width: calc(100vw + 130px);
+    }
+
+    .main-social-network-block {
+        display: none;
+    }
+
+    .main-videos-block {
+        margin-right: 0;
+    }
+
+
+ }
+
+ @media (max-width: 768px) {
+
+
+    .header-welcome {
+        margin-top: 128px;
+    }
+
+    .header-welcome__title {
+        font-size: 28px;
+        letter-spacing: 5.8px;
+    }
+
+    .header-welcome__sub-title {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .header-welcome__scroll-down {
+        margin-top: 100px;
+    }
+
+
+    .advantages-block {
+        justify-content: initial;
+    }
+
+    .advantages-block__item__text-title {
+        margin-top: 6px;
+
+        font-size: 17px;
+        letter-spacing: 0.85px;
+    }
+
+    .advantages-block__item__text {
+        margin-top: 8px;
+
+        font-size: 11px;
+        letter-spacing: 0.55px;
+    }
+
+
+
+    .main-videos-block {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    }
+
+    .footer {
+        margin-top: 51px;
+        padding-bottom: 155px;
+
+        background-position-y: 72px;
+    }
+
+    .footer-social-network-block {
+        display: flex;
+    }
+
+    .footer-contact {
+        margin-top: 42px;
+    }
+
+    .footer-contact_for_contact {
+        font-size: 13px;
+    }
+
+    .footer-contact__email {
+        font-size: 13px;
+    }
+
+    .footer__made-with {
+
+    }
+ }
+
+
+@media (max-width: 576px) {
+
+    .header::after {
+        content: none;
+    }
+
+    .header-nav {
+        padding-top: 40px;
+    }
+
+        .header-nav__list__item-link  {
+            padding-left: 0;
+        }
+
+    .header-welcome {
+        padding-bottom: 80px;
+    }
+
+
+    .header-welcome__addition-info {
+        margin-top: 20px;
+        font-size: 8px;
+        letter-spacing: 0.4px;
+    }
+
+    .header-welcome__scroll-down {
+        display: none;
+    }
+
+    .main-videos-block {
+        margin-top: 69px;
+    }
+
+    .footer-social-network-block {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 393px) {
+
+  .header-welcome__title {
+      font-size: 24px;
+      letter-spacing: 5.8px;
+  }
+
+  .header-welcome__sub-title {
+      font-size: 16px;
+      letter-spacing: 4px;
+  }
+
+  .header-nav__list__item-link {
+        font-size: 13px;
+  }
+
+  .advantages-block__item:not(:last-child) {
+      margin-right: 85px;
+  }
+
+}

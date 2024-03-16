@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+
+@font-face {
+    font-family: Breymont;
+    src: url('../fonts/Breymont/Breymont-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Breymont;
+    src: url('../fonts/Breymont/Breymont-Light.ttf');
+    font-weight: 300;
+}

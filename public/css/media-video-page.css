@@ -1,0 +1,31 @@
+@media (max-width: 576px) { 
+  
+}
+
+@media (max-width: 768px) {
+    .header-video-top {
+        padding: 39px 0;
+    }
+
+    .header-video-top__link-to-back > span {
+        display: none;
+    }
+
+    .header-video-top__title {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+    }
+
+    .page-video-block__name-video {
+        font-size: 18px;
+        letter-spacing: 0.9px;
+    }
+
+
+    .page-videos-block {
+        margin-top: 40px;
+    }
+    
+
+}
+

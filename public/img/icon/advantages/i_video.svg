@@ -1,0 +1,11 @@
+<svg id="videos" xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <line id="Линия_3" data-name="Линия 3" y2="67" transform="translate(26 11)" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <line id="Линия_4" data-name="Линия 4" y1="67" transform="translate(64 11)" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <rect id="Прямоугольник_8" data-name="Прямоугольник 8" width="67" height="67" rx="2" transform="translate(11 11)" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <line id="Линия_5" data-name="Линия 5" x1="15" transform="translate(11 26)" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <line id="Линия_6" data-name="Линия 6" x1="15" transform="translate(11 64)" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <line id="Линия_7" data-name="Линия 7" x2="14" transform="translate(64 64)" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <line id="Линия_8" data-name="Линия 8" x2="14" transform="translate(64 26)" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <line id="Линия_9" data-name="Линия 9" x1="67" transform="translate(11 45)" fill="none" stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <rect id="Прямоугольник_9" data-name="Прямоугольник 9" width="90" height="90" fill="none"/>
+</svg>
