@@ -362,6 +362,27 @@
                     </div>
                     <!-- End Row -->
                 </div>
+                <div class="container">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <td>Название категории</td>
+                            <td>Действия</td>
+                        </tr>
+
+                        </thead>
+                        <tbody>
+                            <?php $__currentLoopData = $category; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr>
+                                <td><?php echo e($cat['title']); ?></td>
+                                <td><a href="<?php echo e(route("category.delete:id", $cat['id'])); ?>" class="btn btn-danger">
+                                        Удалить
+                                    </a></td>
+                                </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- End Tab Content -->
         </div>
@@ -1206,8 +1227,18 @@
                                         <i class="bi-briefcase"></i>
                                     </div>
                                     <input type="text" class="form-control" name="title"
-                                           id="projectNameNewProjectLabel" placeholder="Введи название видео здесь"
-                                    >
+                                           id="projectNameNewProjectLabel" placeholder="Введи название видео здесь">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="projectNameNewProjectLabel" class="form-label">Введи длительность видео </label>
+
+                                <div class="input-group input-group-merge">
+                                    <div class="input-group-prepend input-group-text">
+                                        <i class="bi-clock"></i>
+                                    </div>
+                                    <input type="text" class="form-control" name="video_time"
+                                           id="projectNameNewProjectLabel" placeholder="Введи длительность видео здесь">
                                 </div>
                             </div>
                             <!-- End Form -->
@@ -1236,7 +1267,7 @@
 
 
 
-                                        <input name='category' id="input" class='some_class_name' placeholder='Введи сюда категорию' data-whitelist="<?php $__currentLoopData = $category; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> <?php echo e($item['title']); ?>, <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>" >
+                                        <input name='category' id="input" class='some_class_name form-control' placeholder='Введи сюда категорию' data-whitelist="<?php $__currentLoopData = $category; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> <?php echo e($item['title']); ?>, <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>" >
                                        </div>
                                     <script>
                                         var inputElm = document.getElementById('input'),

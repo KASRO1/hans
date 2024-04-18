@@ -24,19 +24,16 @@ class AdminController extends Controller
 
         $totalUniqueVisitsQuery = Action::distinct('IP');
 
-        // Проверяем наличие параметра 'date' в запросе
         if ($request->has('date')) {
-            // Получаем диапазон дат из GET-параметра и разделяем его
             [$startDate, $endDate] = explode(' - ', $request->get('date'));
 
-            // Преобразуем строки в объекты Carbon для использования в запросах
             $startDate = Carbon::createFromFormat('m/d/Y', trim($startDate));
             $endDate = Carbon::createFromFormat('m/d/Y', trim($endDate))->endOfDay(); // Включаем конец дня для конечной даты
 
             // Применяем фильтрацию по дате
-            $visitsByCountryQuery->whereBetween('created_at', [$startDate, $endDate]);
-            $visitsByBtnQuery->whereBetween('created_at', [$startDate, $endDate]);
-            $totalUniqueVisitsQuery->whereBetween('created_at', [$startDate, $endDate]);
+            $visitsByCountryQuery->whereBetween('created_at', [$startDate, $endDate])->orderBy("desc");
+            $visitsByBtnQuery->whereBetween('created_at', [$startDate, $endDate])->orderBy("desc");
+            $totalUniqueVisitsQuery->whereBetween('created_at', [$startDate, $endDate])->orderBy("desc");
         }
 
         $visitsByCountry = $visitsByCountryQuery->get();
@@ -54,18 +51,32 @@ class AdminController extends Controller
     public function settings()
     {
         $Settings = Setting::first();
+        if($Settings['btn_fansly'] == 1) {
+            $Settings['btn_fansly'] = "checked";
+        }
+        if($Settings['btn_onlyfans_free'] == 1) {
+            $Settings['btn_onlyfans_free'] = "checked";
+        }
+        if($Settings['btn_onlyfans_vip'] == 1) {
+            $Settings['btn_onlyfans_vip'] = "checked";
+        }
+
 
         return view('admin.settings', ["settings" => $Settings]);
     }
 
     public function settingsSave(Request $request)
     {
+
         $settings = Setting::first();
         $settings->onlyfans_vip = $request->onlyfans_vip;
         $settings->onlyfans_free = $request->onlyfans_free;
         $settings->fansly = $request->fansly;
         $settings->instagram = $request->instagram;
         $settings->twitter = $request->twitter;
+        $settings->btn_fansly = $request->fansly_check == "" ? 0 : 1;
+        $settings->btn_onlyfans_free = $request->onlyfans_free_check == "" ? 0 : 1;
+        $settings->btn_onlyfans_vip = $request->onlyfans_vip_check  == "" ? 0 : 1;
         $settings->save();
         return redirect()->route('settings');
 
@@ -95,6 +106,7 @@ class AdminController extends Controller
         $video->title = $request->title;
         $video->path_preview = $preview_path;
         $video->description = $request->description;
+        $video->time_video = $request->video_time;
         $video->category = $categories;
         $video->path_video = $video_path;
         $video->show_main = $show_main;
@@ -109,5 +121,12 @@ class AdminController extends Controller
         $category->save();
 
         return redirect()->route('settings.videos');
+    }
+
+    public function deleteCategory($id)
+    {
+        $category = Category::find($id);
+        $category->delete();
+        return back();
     }
 }

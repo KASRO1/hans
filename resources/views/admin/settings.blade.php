@@ -218,6 +218,27 @@
                                     </div>
                                 </div>
 
+                                <div class="row mb-4">
+                                    <label for="emailLabel" class="col-sm-3 col-form-label form-label">Включить fansly? </label>
+
+                                    <div class="col-sm-9 ">
+                                        <input type="checkbox" class="form-check" {{$settings['btn_fansly']}} name="fansly_check" id="emailLabel" aria-label="Email" value="1">
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <label for="emailLabel" class="col-sm-3 col-form-label form-label">Включить OnlyFans free? </label>
+
+                                    <div class="col-sm-9 ">
+                                        <input type="checkbox" class="form-check" {{$settings['btn_onlyfans_free']}} name="onlyfans_free_check" id="emailLabel" aria-label="Email" value="1">
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <label for="emailLabel" class="col-sm-3 col-form-label form-label">Включить OnlyFans Vip? </label>
+
+                                    <div class="col-sm-9 ">
+                                        <input type="checkbox" class="form-check" {{$settings['btn_onlyfans_vip']}} name="onlyfans_vip_check" id="emailLabel" aria-label="Email" value="1">
+                                    </div>
+                                </div>
 
                                 <div class="d-flex justify-content-end">
                                     <button type="submit" class="btn btn-primary">Сохранить</button>

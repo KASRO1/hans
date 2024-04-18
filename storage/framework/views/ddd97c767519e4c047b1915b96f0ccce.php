@@ -68,7 +68,7 @@
             <a href="<?php echo e(route("redirect:btn_name", "instagram")); ?>" target="_blank"
                class="instagram-bg social-network-block__item-link"
                data-tooltip="Instagram">
-                <img src="img/icon/social/i_instagram.svg"
+                <img src="/img/icon/social/i_instagram.svg"
                      alt="instagram"
                      class="social-network-block__item-img">
             </a>
@@ -76,7 +76,7 @@
             <a href="<?php echo e(route("redirect:btn_name", "twitter")); ?>" target="_blank"
                class="twiter-bg social-network-block__item-link"
                data-tooltip="Twitter">
-                <img src="img/icon/social/i_twiter.svg" alt="twiter"
+                <img src="/img/icon/social/i_twiter.svg" alt="twiter"
                      class="social-network-block__item-img">
             </a>
 
@@ -113,13 +113,13 @@
                             </h4>
 
                             <p class="videos-block-item__category">
-                                <?php echo e($video['category']); ?>
+                                <?php echo e(implode(",", json_decode($video['category'], 0))); ?>
 
                             </p>
                         </div>
 
                         <span class="videos-block-item__time">
-                           <?php echo e(\Carbon\Carbon::parse($video['created_at'])->format("h:i")); ?>
+                           <?php echo e($video['time_video']); ?>
 
                      </span>
                     </div>

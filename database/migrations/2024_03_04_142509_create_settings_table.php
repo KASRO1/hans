@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string("fansly")->nullable();
             $table->string("instagram")->nullable();
             $table->string("twitter")->nullable();
+            $table->boolean("btn_fansly")->default(true);
+            $table->boolean("btn_onlyfans_free")->default(true);
+            $table->boolean("btn_onlyfans_vip")->default(true);
             $table->timestamps();
         });
 

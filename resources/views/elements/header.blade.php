@@ -47,7 +47,6 @@
 
             <div class="header-welcome">
                 <h1 class="header-welcome__title">
-                    <!-- <img src="img/logo.svg" class="header-welcome__title-img" alt="Logo"> -->
                     HansEl & grETTEl
                 </h1>
 
@@ -56,9 +55,10 @@
                 </h2>
 
                 <div class="header-welcome__wrap-btn">
+                    @if($settings['btn_onlyfans_vip'])
                     <a href="{{route("redirect:btn_name", "onlyfans_vip")}}"
                        target="_blank"
-                       class="btn-subscr header-welcome__wrap-btn__btn">
+                       class="btn-subscr relative header-welcome__wrap-btn__btn">
                         <svg xmlns="http://www.w3.org/2000/svg"
                              class="btn-subscr__icon" width="47.112"
                              height="31.4" viewBox="0 0 47.112 31.4">
@@ -80,12 +80,14 @@
                                 </g>
                             </g>
                         </svg>
-                        <span>OnlyFans <span class="pulse">Vip</span></span>
+                        <span>OnlyFans </span>
+                        <span class="tag-free">Vip</span>
                     </a>
-
+                    @endif
+                    @if($settings['btn_onlyfans_free'])
                     <a href="{{route("redirect:btn_name", "onlyfans_free")}}"
                        target="_blank"
-                       class="btn-subscr header-welcome__wrap-btn__btn">
+                       class="btn-subscr relative header-welcome__wrap-btn__btn">
                         <svg xmlns="http://www.w3.org/2000/svg"
                              class="btn-subscr__icon" width="47.112"
                              height="31.4" viewBox="0 0 47.112 31.4">
@@ -107,10 +109,13 @@
                                 </g>
                             </g>
                         </svg>
-                        <span>OnlyFans <span class="pulse font_bold">Free</span></span>
+                        <span>OnlyFans </span>
+                        <span class="tag-free">Free</span>
                     </a>
+                    @endif
                 </div>
                 <div class="header-welcome__wrap-btn">
+                    @if($settings['btn_fansly'])
                     <a href="{{route("redirect:btn_name", "fansly")}}"
                        target="_blank"
                        class="btn-subscr header-welcome__wrap-btn__btn">
@@ -137,6 +142,7 @@
                         </svg>
                         <span>Fansly</span>
                     </a>
+                    @endif
 
                 </div>
                 <div class="header-welcome__wrap-btn">
@@ -152,7 +158,7 @@
 
 
                     </div>
-                    
+
                 </div>
 
 
@@ -160,7 +166,7 @@
                         The cost of a subscription for one calendar month
                     </span>
 
-                <a href="index.html#advantages-block-main"
+                <a href="#advantages-block-main"
                    class="header-welcome__scroll-down">
                     <svg id="Mouse"
                          class="header-welcome__scroll-down__icon"

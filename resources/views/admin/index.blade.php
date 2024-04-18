@@ -362,8 +362,8 @@
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0">
                                                     <img class="avatar-xss avatar-circle"
-                                                         src="./assets/vendor/flag-icon-css/flags/1x1/{{$user['country'][0].$user['country'][1]}}.svg"
-                                                         alt="Image description">
+                                                         src="./assets/vendor/flag-icon-css/flags/1x1/{{strtolower($user['country'][0] . $user['country'][1]) }}.svg"
+                                                        >
                                                 </div>
                                                 <div class="flex-grow-1 ms-2">{{$user['country']}}</div>
                                             </div>

@@ -12,6 +12,19 @@
     cursor: pointer;
     transition: all 1s; /* Перемещаем свойство transition сюда */
 }
+.tag-free{
+    background: red;
+    border-radius: 16px;
+    padding: 12px 16px;
+    font-size: 12px !important;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 358px;
+    top: -9px;
+}
+.relative{
+    position: relative;
+}
 
 .btn-subscr > span {
     margin: 0 auto;

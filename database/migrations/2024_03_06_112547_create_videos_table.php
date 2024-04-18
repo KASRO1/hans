@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text("description");
             $table->string("category");
             $table->string("path_video");
+            $table->string("time_video");
             $table->boolean("show_main");
             $table->timestamps();
         });

@@ -31,4 +31,5 @@ Route::middleware('check_auth')->prefix("admin")->group(function () {
     Route::get('/videos', [AdminController::class, 'videos'])->name("settings.videos");
     Route::post('/video/add', [AdminController::class, 'videoAdd'])->name("video.add");
     Route::post('/category/add', [AdminController::class, 'createCategory'])->name("category.add");
+    Route::get("/category/delete/{id}", [AdminController::class, "deleteCategory"])->name("category.delete:id");
 });
